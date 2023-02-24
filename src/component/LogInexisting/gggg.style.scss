@@ -1,0 +1,33 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+
+    input{
+        width: 90%;
+        border: none;
+        border-bottom: 2px solid red;
+        outline: 0;
+        padding-top: 10px;
+        font-size: 20px;
+        
+    }
+    label{
+        text-align: center;
+        /* border: 2px solid black; */
+        /* border: none; */
+        /* margin-bottom: -20px; */
+        padding: 0px;
+        z-index: 0;
+    }
+    
+    input:focus{
+        background-color: red;
+    }
+}
+
+
+
+

@@ -1,0 +1,14 @@
+.container-Div{
+    padding: 5px;
+    display: flex;
+    gap: 30px;
+    align-items: center ;
+    border: 1px solid grey;
+}
+.img-div{
+    width: 30%;
+}
+img{
+    width: 100%;
+
+}

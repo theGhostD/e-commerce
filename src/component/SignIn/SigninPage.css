@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.exist_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 5px solid grey;
+    height: 100%;
+    width: 65%;
+    box-shadow: 30px 35px 2px black;
+    background-color: white;
+}
+
+
+.signUp_container{
+    border: 5px solid grey;
+    width: 50%;
+    height: 100%;
+    box-shadow: -30px 35px 2px black;
+    background-color: white;
+}
+
+h1{
+    text-align: center;
+    padding: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 30px;
+    padding: 10px;
+}
+.form-container{
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 90%;
+    height: 100%;
+    background: none;
+    border: 0;
+    border-bottom: 2px solid grey;
+    padding-top: 35px;
+    padding-left: 5px;
+    margin: 0;
+    font-size: 18px;
+    outline: none;
+    border-radius: 5px;
+}
+
+label{
+   position: absolute;
+    cursor: text;
+    top: 0;
+    left: 6%;
+    /* transition: 0.3s ease-in-out; */
+}
+
+input:focus{
+    border-radius: 10px;
+}
+
+input:focus + label{
+    background-color: white;
+    font-size: 12px;
+    top: -10px;
+    left: 6%;
+    font-weight: bolder;
+    transition: 0.3s ease-in;
+}
+/* #label1{
+    padding-top: 25px;
+} */
+
+button{
+    padding: 10px;
+    width: 70%;
+    cursor: pointer;
+    border: 0;
+    border-radius: 20px;
+   background-color: black;
+   
+}
+button:hover{
+    background-color: blue;
+}
+.btn1,.btn2{
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: white;
+    
+}
+
+
+.btn3{
+    width: 100%;
+    background-color: red;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: white;
+}
+.theOther{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.addContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    width: 47%;
+    background-image: url(../../style/cropped.jpg);
+}
+.addContent h2{
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.addContent p{
+    color: white;
+}
+.addContent .btn4{
+    background-color:red;
+}
+.addContent .btn4:hover{
+    background-color:black;
+}
+.btn4 .BtnLink{
+    width: 100%;
+    text-decoration: none;
+    color: white;
+}
+
+ .BtnLink:hover{
+    /* color: black; */
+    text-decoration: none;
+}
+/* .addContent  */
+.designWrapper{
+    height: 500px;
+    max-width: 97%;
+    margin: auto;
+    border: 2px solid black;
+    background-image: url(../../style/cropped.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.CoverAll{
+    /* border: 2px solid pink; */
+    padding: 20px;
+}

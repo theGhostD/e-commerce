@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(70, 68, 68);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.form-container{
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+}
+input{
+    width: 100%;
+    height: 45px;
+    background: none;
+    border: 0;
+    border-bottom: 2px solid grey;
+    outline: none;
+
+}
+input,label{
+    width: 100%;
+}
+label{
+    font-size: 10px;
+    /* padding: 0; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: text;
+}
+
+/* input:hover{
+    border-bottom: 3px solid rgb(94, 93, 93);
+} */
+
+input:focus + label{
+    top: 0;
+    font-size: smaller;
+}
