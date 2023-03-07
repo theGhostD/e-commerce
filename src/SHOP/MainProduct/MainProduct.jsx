@@ -5,7 +5,6 @@ import { useContext } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { theIsloading } from "../../store/product/product.action";
-import Test from "../../test/test";
 import ProductCard from "../shopComponent/shop.component";
 import { ProductContextShop } from "../shopContext/shopContext";
 import "./MainProduct.css";

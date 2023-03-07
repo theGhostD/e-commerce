@@ -1,7 +1,6 @@
-import FadeIn from "react-fade-in/lib/FadeIn";
+
 import { useSelector } from "react-redux";
 import { theIsloading } from "../../store/product/product.action";
-import Test from "../../test/test";
 import "./preview.css";
 import PreviewComponent from "./previewComponent";
 

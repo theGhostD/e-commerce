@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useContext } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart, removingQuantity } from "../../store/cart/cart-reducer";
-import "./checkOut.Child.css"
+import "./checkOut.css"
 
 
 const CheckOutchild = ({ theObj }) => {
