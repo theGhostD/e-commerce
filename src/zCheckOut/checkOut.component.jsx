@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { useSelector } from "react-redux";
+import PaymentForm from "../component/payment_form/PaymentForm";
 import { selectCartTotal } from "../store/cart/cart-selector";
 import CheckOutchild from "./childComponent/checkOut.child";
 
@@ -30,6 +31,7 @@ const CheckOutcomponent = () => {
         </span>
         <h1>${cartTotal}</h1>
       </div>
+      <PaymentForm/>
     </div>
   );
 };

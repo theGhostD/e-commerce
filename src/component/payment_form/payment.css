@@ -1,0 +1,19 @@
+.formContainer{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid grey;
+    margin-top: 20px;
+}
+form{
+    height: 200px ;
+    min-width: 500px;
+  
+}
+
+.ddd{
+    padding: 20px;
+    width: 100%;
+}

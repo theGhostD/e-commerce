@@ -22,16 +22,14 @@ const MainProduct = () => {
   }, [title, TheProducts]);
   return (
     <>
-      {isloading ? (
-        <Test />
-      ) : (
+     
         <div className="mainProductDiv">
           {reallProduct &&
             reallProduct.map((value) => (
               <ProductCard key={value.id} thevalue={value} />
             ))}
         </div>
-      )}
+      
     </>
   );
 };
