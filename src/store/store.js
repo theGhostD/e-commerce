@@ -15,7 +15,7 @@ const middleWares = [process.env.NODE_ENV !== "production" && logger];
 
 export const store = configureStore({
   reducer: rootReducer,
-  middleware : middleWares
+  // middleware : middleWares
 })
 // const persistedReducer = persistReducer(persistConfig, rootReducer);
 
