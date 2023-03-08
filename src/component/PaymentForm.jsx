@@ -1,31 +1,41 @@
 // import { CardElement } from "@stripe/react-stripe-js"
-
+// import PaystackPop from "@paystack/inline-js"
 // import { useStripe, useElements } from "@stripe/react-stripe-js"
-import "../component/payment_form/payment.css"
+import "../component/payment_form/payment.css";
 import { useState } from "react";
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux";
 import { currentUser } from "../store/user/userSelector";
-import { selectCartTotal } from "../store/cart/cart-selector";
-import PaystackPop from "@paystack/inline-js"
+import { selectCartItem, selectCartTotal } from "../store/cart/cart-selector";
 
+import { usePaystackPayment } from "react-paystack";
+import { ClearAllCart, setCart } from "../store/cart/cart-reducer";
 
 const PaymentForm = () => {
-
     // const stripe = useStripe();
     // const element = useElements()
-    const user = useSelector(currentUser)
-    const totalCart = useSelector(selectCartTotal)
-    const [paymentStatus, setPaymentStatus] = useState(false)
+    const cart = useSelector(selectCartItem);
+    const totalCart = useSelector(selectCartTotal);
+   
+    const dispatch = useDispatch()
+   
 
-    const { displayName, email } = user
+    const config = {
+        reference: new Date().getTime().toString(),
+        email: 'email@gmail.com',
+        amount: totalCart * 100,
+        publicKey: "pk_test_41dce7573356e246d5fb451747f79859c4190180",
+    };
 
+    const handleSuccess = (ref) => {
+        console.log(cart)
+        if(ref.message === 'Approved'){
+            dispatch(setCart([]))
+        }
+    };
 
+    const handleClose = () => console.log(cart);
 
-    const handleSuccess = (ref) => console.log(ref);
-
-    const handleClose = () => console.log('closed');
-
-    // for stripe payment 
+    // for stripe payment
     // const paymentHandler = async (e) => {
     //     e.preventDefault();
 
@@ -60,35 +70,25 @@ const PaymentForm = () => {
     // }
 
     // for paystack
-    const paymentHandle = (e) => {
-        e.preventDefault();
-        const payStack = new PaystackPop()
-        payStack.newTransaction({
-            key: "pk_test_41dce7573356e246d5fb451747f79859c4190180",
-            amount: totalCart * 100,
-            email,
-            displayName,
-            onsuccess: (ref) => {
-                const message = `payment successful ${ref}`;
-                alert(message)
-            },
-            oncancel: () => handleClose
+    // const paymentHandle = (e) => {
+    //     e.preventDefault();
+    //     const payStack = new PaystackPop()
 
-        })
-    }
+    // }
+    const initializePayment = usePaystackPayment(config);
+  
     return (
         <div className="formContainer">
-
-            <form onSubmit={paymentHandle}>
-
-                {/* <CardElement className="ddd"/> */}
-
-                <button className="paystack-button">Pay ${totalCart} now</button>
-            </form>
-
+            <button
+                className="paystack-button"
+                onClick={() => {
+                    initializePayment(handleSuccess, handleClose);
+                }}
+            >
+                Pay ${totalCart} now
+            </button>
         </div>
-    )
+    );
+};
 
-}
-
-export default PaymentForm
+export default PaymentForm;
