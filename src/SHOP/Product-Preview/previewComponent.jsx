@@ -13,10 +13,8 @@ const PreviewComponent = ({theArr, theTitle}) => {
     <div className="llll">
       {
         theArr.filter((_,index)=>index < 4) 
-        .map((value)=> {
-            console.log(value)
-            return <ProductCard thevalue={value} key={value.id}/>
-        })
+        .map((value)=> <ProductCard thevalue={value} key={value.id}/>
+        )
       }
     </div>
     </>
