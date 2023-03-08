@@ -65,10 +65,10 @@
     cursor: pointer;
 }
 .totalPrice{
-    border: 5px groove red;
+    /* border: 5px groove red; */
     width: 90%;
     display: flex;
-    justify-content: end;
+    justify-content: start;
     align-items:center;
 }
 .testingff{

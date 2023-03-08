@@ -1,20 +1,28 @@
 .formContainer{
     
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: end; */
+    align-items: end;
     flex-direction: column;
-    border: 1px solid grey;
-    margin-top: 20px;
+   
+    width: 82%;
 }
 form{
-    height: 200px ;
-    min-width: 500px;
+    width: 30%;
   
 }
 
 .ddd{
-    border: 1px solid red;
+   
     padding: 20px;
     width: 100%;
+}
+.paystack-button{
+    /* align-self: flex-end; */
+    width: 100%;
+    color: white;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    border-radius: 5px;
 }

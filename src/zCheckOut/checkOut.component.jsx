@@ -4,10 +4,12 @@ import { CardElement } from "@stripe/react-stripe-js";
 import PaymentForm from "../component/PaymentForm";
 import { selectCartTotal } from "../store/cart/cart-selector";
 import CheckOutchild from "./childComponent/checkOut.child";
+import { currentUser } from "../store/user/userSelector";
 
 const CheckOutcomponent = () => {
   const CartItem = useSelector(state => state.cart.CartItem)
   const cartTotal = useSelector(selectCartTotal)
+  const user = useSelector(currentUser)
 
 //   console.log(CartItem);
 
@@ -32,7 +34,10 @@ const CheckOutcomponent = () => {
         
         <h1>${cartTotal}</h1>
       </div>
-      <PaymentForm />
+      {
+        user?<PaymentForm />: <h1>pls login</h1>
+      }
+      
     </div>
   );
 };
