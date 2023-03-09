@@ -1,25 +1,17 @@
 .formContainer{
     
     display: flex;
-    /* justify-content: end; */
+    justify-content: end;
     align-items: end;
     flex-direction: column;
    
     width: 82%;
 }
-form{
-    width: 30%;
-  
-}
 
-.ddd{
-   
-    padding: 20px;
-    width: 100%;
-}
+
+
 .paystack-button{
-    /* align-self: flex-end; */
-    width: 100%;
+    width: 30%;
     color: white;
     padding: 20px;
     text-transform: uppercase;

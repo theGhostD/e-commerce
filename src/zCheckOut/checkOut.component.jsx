@@ -1,10 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { CardElement } from "@stripe/react-stripe-js";
-import PaymentForm from "../component/PaymentForm";
 import { selectCartTotal } from "../store/cart/cart-selector";
 import CheckOutchild from "./childComponent/checkOut.child";
 import { currentUser } from "../store/user/userSelector";
+import PaymentForm from "../component/payment_form/PaymentForm";
 
 const CheckOutcomponent = () => {
   const CartItem = useSelector(state => state.cart.CartItem)
@@ -23,7 +23,7 @@ const CheckOutcomponent = () => {
         <div>remove</div>
       </div>
       {CartItem.map((value) => {
-        // console.log(value);
+        console.log(value);
         return <CheckOutchild theObj={value} key={value.id} />;
       })}
       <div className="totalPrice">

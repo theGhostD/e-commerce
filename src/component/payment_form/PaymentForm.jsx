@@ -1,14 +1,14 @@
 // import { CardElement } from "@stripe/react-stripe-js"
 // import PaystackPop from "@paystack/inline-js"
 // import { useStripe, useElements } from "@stripe/react-stripe-js"
-import "../component/payment_form/payment.css";
+import "./payment.css";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { currentUser } from "../store/user/userSelector";
-import { selectCartItem, selectCartTotal } from "../store/cart/cart-selector";
+import { currentUser } from "../../store/user/userSelector";
+import { selectCartItem, selectCartTotal } from "../../store/cart/cart-selector";
 
 import { usePaystackPayment } from "react-paystack";
-import { ClearAllCart, setCart } from "../store/cart/cart-reducer";
+import { ClearAllCart, setCart } from "../../store/cart/cart-reducer";
 
 const PaymentForm = () => {
     // const stripe = useStripe();
