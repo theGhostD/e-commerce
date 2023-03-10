@@ -8,16 +8,16 @@ import { currentUser } from "../../store/user/userSelector";
 import { selectCartItem, selectCartTotal } from "../../store/cart/cart-selector";
 
 import { usePaystackPayment } from "react-paystack";
-import { ClearAllCart, setCart } from "../../store/cart/cart-reducer";
+import {  clearAllCart } from "../../store/cart/cart-reducer";
 
 const PaymentForm = () => {
     // const stripe = useStripe();
     // const element = useElements()
-    const cart = useSelector(selectCartItem);
     const totalCart = useSelector(selectCartTotal);
    
     const dispatch = useDispatch()
    
+  
 
     const config = {
         reference: new Date().getTime().toString(),
@@ -27,13 +27,12 @@ const PaymentForm = () => {
     };
 
     const handleSuccess = (ref) => {
-        console.log(cart)
         if(ref.message === 'Approved'){
-            dispatch(setCart([]))
+            dispatch(clearAllCart([]))
         }
     };
 
-    const handleClose = () => console.log(cart);
+    const handleClose = () => console.log("cart");
 
     // for stripe payment
     // const paymentHandler = async (e) => {

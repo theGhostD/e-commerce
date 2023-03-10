@@ -16,6 +16,7 @@ import CheckOutcomponent from "./zCheckOut/checkOut.component";
 // import { SetcurrentUser } from "./store/user/user.action";
 import { setCurrentUser } from "./store/user/user.reducer";
 import { useDispatch } from "react-redux";
+import TestPreview from "./SHOP/try/test";
 
 const App = () => {
   const dispatch = useDispatch();
