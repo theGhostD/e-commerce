@@ -16,7 +16,7 @@ import CheckOutcomponent from "./zCheckOut/checkOut.component";
 // import { SetcurrentUser } from "./store/user/user.action";
 import { setCurrentUser } from "./store/user/user.reducer";
 import { useDispatch } from "react-redux";
-import TestPreview from "./SHOP/try/test";
+import ProductDetails from "./SHOP/ProductDetails/productDetails";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -41,6 +41,9 @@ const App = () => {
         <Route path="SignIn" element={<SignIn />} />
         <Route path="SignUp" element={<TheSignUp />} />
         <Route path="checkOut" element={<CheckOutcomponent />} />
+        <Route path="checkOut" element={<CheckOutcomponent />} />
+        <Route path=":productId" element={<ProductDetails />} />
+        
       </Route>
     </Routes>
   );

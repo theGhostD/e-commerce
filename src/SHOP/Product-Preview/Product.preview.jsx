@@ -13,7 +13,7 @@ const ProductPreview = () => {
     <>
       {Object.keys(TheProducts).map((Title) => {
         const realProducts = TheProducts[Title];
-
+        console.log(realProducts)
         return (
               <PreviewComponent
                 theArr={realProducts}

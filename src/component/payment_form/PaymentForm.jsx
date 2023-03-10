@@ -16,7 +16,7 @@ const PaymentForm = () => {
     const totalCart = useSelector(selectCartTotal);
    
     const dispatch = useDispatch()
-   
+    
   
 
     const config = {

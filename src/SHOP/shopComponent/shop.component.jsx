@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addToCart } from '../../store/cart/cart-reducer';
 import { selectCartItem } from '../../store/cart/cart-selector';
-import TestPreview from '../try/test';
 import "./shopComponent.css"
 
 
@@ -15,12 +14,14 @@ const ProductCard = ({ thevalue }) => {
     const cart = useSelector(selectCartItem);
 
     const theHandler = () =>dispatch(addToCart(thevalue))
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    const theProductDetailHandler = ()=> navigate(`/${name}`)
     
     return (
         <div className="container">
             <button className='btn6' onClick={theHandler}>Add to Cart</button>
-            <div className='wrapper' onClick={()=>{}} >
+            <div className='wrapper' onClick={theProductDetailHandler} >
                 
                 <img src={imageUrl} alt="" className='image2' />
                 <div className="product_details" >
